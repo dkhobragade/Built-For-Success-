@@ -6,8 +6,8 @@ export default function CardComponent ( props: CardComponentProps )
 
     return (
         <Card variant="elevation" sx={ { maxWidth: 300, maxHeight: 350 } } className={ `p-2 ${ !props.pointer && 'cursor-pointer' }` } >
-            <Box padding={ 5 } margin={ 2 } borderRadius={ 2 } bgcolor={ props.bgColor } >
-                <Box justifySelf="center" className='p-3 bg-[#f9fafb47] bg-opacity-30 rounded-xl group-hover:scale-125 transition-all duration-300 group-hover:p-4' >
+            <Box padding={ 5 } margin={ 2 } borderRadius={ 2 } bgcolor={ props.bgColor } className='transition-all duration-300 hover:scale-110'  >
+                <Box justifySelf="center" className='p-3 bg-[#f9fafb47] bg-opacity-30 rounded-xl transition-all duration-300 hover:scale-125' >
                     { props.icon }
                 </Box>
             </Box>
