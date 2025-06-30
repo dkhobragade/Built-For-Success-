@@ -4,6 +4,7 @@ export interface CardComponentProps {
     icon: React.ReactNode;
     description: string;
     pointer:boolean
+    onClick: () => void;
 }
 
 

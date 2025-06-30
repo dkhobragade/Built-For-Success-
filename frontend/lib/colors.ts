@@ -6,7 +6,8 @@ const colors = {
     "FugitiveFlamingo":'#F564A9',
     "CowardlyCustard":'#FBF3C1',
     "WhiteSmoke":'#F4F6F5',
-    "LiberatorGold":'#E6C744'
+    "LiberatorGold":'#E6C744',
+    "BlackForestBlue":'#2A4759'
 }
 
 export default colors;
