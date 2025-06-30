@@ -33,4 +33,20 @@ export const CardContent = [
         isLocked: true,
         color:colors.RedOrange,
     },
+    {
+        key:'5',
+        title:'Job Alerts',
+        description: 'Stay updated with the latest job openings in the tech industry.',
+        icon: "WorkHistoryOutlined",
+        isLocked: true,
+        color: colors.FugitiveFlamingo,
+    },
+    {
+        key:'6',
+        title:'Blog',
+        description: 'Read insightful articles on technology, career, and more.',
+        icon: "AutoStoriesOutlined",
+        isLocked: true,
+        color: colors.CowardlyCustard,
+    }
 ]

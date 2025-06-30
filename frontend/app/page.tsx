@@ -1,6 +1,6 @@
 import CardComponent from "@/components/ui/CardComponent";
 import { CardContent } from "@/lib/constants";
-import { LibraryBooksOutlined, ImportantDevicesOutlined, SubjectOutlined, BugReportOutlined } from "@mui/icons-material";
+import { LibraryBooksOutlined, ImportantDevicesOutlined, SubjectOutlined, AutoStoriesOutlined, BugReportOutlined, WorkHistoryOutlined } from "@mui/icons-material";
 import { Box, Container, Grid } from "@mui/material";
 export default function Home ()
 {
@@ -9,7 +9,9 @@ export default function Home ()
     LibraryBooksOutlined: <LibraryBooksOutlined />,
     ImportantDevicesOutlined: <ImportantDevicesOutlined />,
     SubjectOutlined: <SubjectOutlined />,
-    BugReportOutlined: <BugReportOutlined />
+    BugReportOutlined: <BugReportOutlined />,
+    WorkHistoryOutlined: <WorkHistoryOutlined />,
+    AutoStoriesOutlined: <AutoStoriesOutlined />
   }
 
   const renderCardComponent = () =>
