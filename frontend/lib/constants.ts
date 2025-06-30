@@ -66,10 +66,3 @@ export const ScrollItems = [
     "❓ Interview Qs",
     "🚀 Tech Stack Mastery"
 ]
-
-export const DSAContent = [
-    "📚 450+ handpicked modules covering every topic you need to crack top tech interviews.",
-    "🎥 Detailed video explanations for brute, better, and optimal approaches.",
-    "📝 Quick revision notes and structured articles for every topic.",
-    "💻 Code examples in C++, Java, Python, and JavaScript.",
-]

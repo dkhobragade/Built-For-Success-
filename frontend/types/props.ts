@@ -15,5 +15,6 @@ export interface ButtonProps {
     fullWidth?:boolean,
     loading?:boolean,
     size?:'small' | 'medium' | 'large'
-    color?:'inherit' | 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning' | string
+    color?:'inherit' | 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning' | string,
+    sx?: React.CSSProperties;
 }

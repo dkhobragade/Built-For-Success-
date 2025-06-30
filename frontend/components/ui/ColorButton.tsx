@@ -13,7 +13,7 @@ export default function ColorButton ( props: ColorButtonProps )
         backgroundColor: "Black"
     } ) );
 
-    return <ColorButton fullWidth={ props.fullWidth } size={ props.size } variant={ props.variant }  >
+    return <ColorButton sx={ props.sx } fullWidth={ props.fullWidth } size={ props.size } variant={ props.variant }  >
         { props.text }
     </ColorButton>
 }
