@@ -27,10 +27,8 @@ export default function RootLayout ( {
 }> )
 {
   return (
-    <html lang="en">
-      <body
-        className={ `${ geistSans.variable } ${ geistMono.variable } antialiased w-full h-screen` }
-      >
+    <html lang="en" className={ `${ geistSans.variable } ${ geistMono.variable }` }>
+      <body className='antialiased w-full h-screen'>
         <AppRouterCacheProvider>
           <ThemeProvider theme={ theme } >
             { children }
