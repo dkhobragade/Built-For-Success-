@@ -5,3 +5,14 @@ export interface CardComponentProps {
     description: string;
     pointer:boolean
 }
+
+
+export interface ButtonProps {
+    variant: 'contained' | 'outlined'| 'text',
+    text:string,
+    disable?:boolean,
+    fullWidth?:boolean,
+    loading?:boolean,
+    size?:'small' | 'medium' | 'large'
+    color?:'inherit' | 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning' | string
+}

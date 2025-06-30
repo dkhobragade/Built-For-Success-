@@ -50,3 +50,19 @@ export const CardContent = [
         color: colors.CowardlyCustard,
     }
 ]
+
+
+export const ScrollItems = [
+    "📘 DSA Sheet",
+    "🧠 System Design",
+    "📚 CS Subjects",
+    "🏆 Competitive Programming",
+    "🧮 Aptitude Prep",
+    "🗣️ Mock Interviews",
+    "📝 Resume Building",
+    "🎨 Frontend Dev",
+    "🛠️ Backend Dev",
+    "🔗 Full Stack Projects",
+    "❓ Interview Qs",
+    "🚀 Tech Stack Mastery"
+]
