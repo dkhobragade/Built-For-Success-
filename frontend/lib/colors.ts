@@ -4,7 +4,9 @@ const colors = {
     "Jadestone":"#03A6A1",
     "RedOrange":"#FF3F33",
     "FugitiveFlamingo":'#F564A9',
-    "CowardlyCustard":'#FBF3C1'
+    "CowardlyCustard":'#FBF3C1',
+    "WhiteSmoke":'#F4F6F5',
+    "LiberatorGold":'#E6C744'
 }
 
 export default colors;
