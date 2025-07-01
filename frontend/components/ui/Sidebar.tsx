@@ -4,12 +4,13 @@ import colors from "@/lib/colors";
 import { CardContent } from "@/lib/constants";
 import { AutoStoriesOutlined, BugReportOutlined, DoubleArrowOutlined, ImportantDevicesOutlined, LibraryBooksOutlined, SubjectOutlined, WorkHistoryOutlined } from "@mui/icons-material";
 import { Box, Tooltip, Typography } from "@mui/material";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Sidebar ()
 {
-
-    const [ isSidebarOpen, setIsSidebarOpen ] = useState( true )
+    const router = useRouter()
+    const [ isSidebarOpen, setIsSidebarOpen ] = useState( false )
     const [ selectedType, setSelectedType ] = useState( '1' )
 
     const iconMap = {
@@ -21,11 +22,25 @@ export default function Sidebar ()
         AutoStoriesOutlined: <AutoStoriesOutlined />
     }
 
+    const onChangeType = ( key: string ) =>
+    {
+        setSelectedType( key )
+        if ( key == "1" )
+        {
+            router.push( '/dsa' )
+        }
+        else if ( key == "2" )
+        {
+            router.push( '/systemdesign' )
+        }
+        console.log( key )
+    }
+
 
     const renderSideBar = () =>
     {
         return <Box flexDirection="column" gap={ 2 } display="flex">
-            { CardContent.map( ( card, index ) => <Box fontFamily="cursive" onClick={ () => setSelectedType( card.key ) } color={ selectedType === card.key ? colors.WhiteSmoke : colors.BlackForestBlue } bgcolor={ selectedType === card.key ? colors.BlackForestBlue : colors.WhiteSmoke } className='cursor-pointer' padding={ 1 } borderRadius={ 2 } key={ index } display="flex" >
+            { CardContent.map( ( card, index ) => <Box fontFamily="cursive" onClick={ () => onChangeType( card.key ) } color={ selectedType === card.key ? colors.WhiteSmoke : colors.BlackForestBlue } bgcolor={ selectedType === card.key ? colors.BlackForestBlue : colors.WhiteSmoke } className='cursor-pointer' padding={ 1 } borderRadius={ 2 } key={ index } display="flex" >
                 <Box display="flex" alignItems="center" gap={ 1.5 }>
                     <Box>
                         { !isSidebarOpen ?

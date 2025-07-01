@@ -26,6 +26,10 @@ export default function HeroTextBlock ()
         {
             router.push( '/dsa' )
         }
+        else if ( index == 1 )
+        {
+            router.push( '/systemdesign' )
+        }
     }
 
     const renderCardComponent = () =>
