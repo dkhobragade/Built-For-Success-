@@ -17,7 +17,7 @@ export default function Home ()
       <HeroTextBlock />
       <SkillToJobJourney />
       <DsaMainPage />
-      <Footer />
+      {/* <Footer /> */ }
     </Box>
   );
 }

@@ -18,6 +18,7 @@ export default function DsaMainPage ()
     return <Box ref={ container } className="relative h-[200vh]">
         <Section1 ref={ container } scrollYProgress={ scrollYProgress } />
         <Section2 scrollYProgress={ scrollYProgress } />
+        <Section3 scrollYProgress={ scrollYProgress } />
     </Box>
 }
 
@@ -37,7 +38,7 @@ const Section1 = ( { scrollYProgress }: any ) =>
             <Grid container>
                 <Grid size={ 8 }>
                     <Box display="flex" flexDirection="column" gap={ 2 } >
-                        <Typography component="div" display="flex" gap={ 1 } fontSize={ 20 } fontWeight={ 600 }>
+                        <Typography fontFamily="cursive" component="div" display="flex" gap={ 1 } fontSize={ 20 } fontWeight={ 600 }>
                             DSA Pattern Mastery
                         </Typography>
                         <Typography>
@@ -63,7 +64,7 @@ const Section1 = ( { scrollYProgress }: any ) =>
                 <Grid size={ 8 }>
                     <Box display="flex" flexDirection="column" gap={ 4 } >
                         <Box display="flex" flexDirection="column" gap={ 2 }>
-                            <Typography component="div" display="flex" gap={ 1 } fontSize={ 20 } fontWeight={ 600 }>
+                            <Typography fontFamily="cursive" component="div" display="flex" gap={ 1 } fontSize={ 20 } fontWeight={ 600 }>
                                 Master Trees & Graphs
                             </Typography>
                             <Typography>
@@ -94,19 +95,102 @@ const Section2 = ( { scrollYProgress }: any ) =>
             </Box>
             <Grid container>
                 <Grid size={ 8 }>
-                    <Typography display="flex" gap={ 1 } fontSize={ 20 } fontWeight={ 600 }>
-                        Practicing 200+ Problems and Still Struggling in Interviews?
-                        {/* <Box bgcolor={ colors.LiberatorGold } padding={ 1 } className='rotate-5' borderRadius={ 2 } width={ 200 } height="fit-content" >
-                            You're Not Alone.
-                        </Box> */}
-                    </Typography>
-                    <Typography>
-                        You've spent weeks on LeetCode, solved countless problems...
-                        But when it's time to explain your thought process in an interview – you freeze.
-                    </Typography>
+                    <Box display="flex" flexDirection="column" gap={ 2 } >
+                        <Typography fontFamily="cursive" component="div" display="flex" gap={ 1 } fontSize={ 20 } fontWeight={ 600 }>
+                            Recursion & Backtracking Lab
+                        </Typography>
+                        <Typography>
+                            From basic recursion to solving hard-level problems with smart backtracking.
+                        </Typography>
+                        <Typography color="blue" className="underline cursor-pointer" >
+                            Get Started
+                        </Typography>
+                    </Box>
                 </Grid>
                 <Grid size={ 4 }>
-                    1
+                    <Box>
+                        <Image src='/DP.png' width={ 350 } height={ 350 } alt="DP" />
+                    </Box>
+                </Grid>
+            </Grid>
+            <Grid container>
+                <Grid size={ 4 }>
+                    <Box>
+                        <Image src='/RB.png' alt="RB" width={ 350 } height={ 0 } />
+                    </Box>
+                </Grid>
+                <Grid size={ 8 }>
+                    <Box display="flex" flexDirection="column" gap={ 4 } >
+                        <Box display="flex" flexDirection="column" gap={ 2 }>
+                            <Typography fontFamily="cursive" component="div" display="flex" gap={ 1 } fontSize={ 20 } fontWeight={ 600 }>
+                                Dynamic Programming
+                            </Typography>
+                            <Typography>
+                                Understand overlapping subproblems and optimal substructure through 1D/2D DP, memoization, tabulation.
+                            </Typography>
+                            <Typography color="blue" className="underline cursor-pointer" >
+                                Get Started
+                            </Typography>
+                        </Box>
+                    </Box>
+                </Grid>
+            </Grid>
+        </Box>
+    </motion.div>
+}
+
+const Section3 = ( { scrollYProgress }: any ) =>
+{
+    const scale = useTransform( scrollYProgress, [ 0, 1 ], [ 0.8, 1 ] );
+    const rotate = useTransform( scrollYProgress, [ 0, 1 ], [ 5, 0 ] )
+
+    return <motion.div style={ { scale, rotate } } className="relative" >
+        <Box bgcolor={ colors.WhiteSmoke } margin={ 4 } padding={ 5 } borderRadius={ 4 } >
+            <Box justifySelf="end" top={ -60 } position="relative" bgcolor={ colors.LiberatorGold } padding={ 2 } width="fit-content" borderRadius={ 2 }>
+                <Typography fontWeight={ 600 } fontFamily="cursive"  >
+                    Confidence in your approach is just as important as correctness in your code.
+                </Typography>
+            </Box>
+            <Grid container>
+                <Grid size={ 8 }>
+                    <Box display="flex" flexDirection="column" gap={ 2 } >
+                        <Typography fontFamily="cursive" component="div" display="flex" gap={ 1 } fontSize={ 20 } fontWeight={ 600 }>
+                            Top Interview Questions
+                        </Typography>
+                        <Typography>
+                            Curated handpicked problems asked at Google, Amazon, Meta, etc.
+                        </Typography>
+                        <Typography color="blue" className="underline cursor-pointer" >
+                            Get Started
+                        </Typography>
+                    </Box>
+                </Grid>
+                <Grid size={ 4 }>
+                    <Box>
+                        <Image src='/SD.png' width={ 350 } height={ 350 } alt="Tree" />
+                    </Box>
+                </Grid>
+            </Grid>
+            <Grid container>
+                <Grid size={ 4 }>
+                    <Box>
+                        <Image src='/G.png' alt="Merge Sort" width={ 350 } height={ 0 } />
+                    </Box>
+                </Grid>
+                <Grid size={ 8 }>
+                    <Box display="flex" flexDirection="column" gap={ 4 } >
+                        <Box display="flex" flexDirection="column" gap={ 2 }>
+                            <Typography fontFamily="cursive" component="div" display="flex" gap={ 1 } fontSize={ 20 } fontWeight={ 600 }>
+                                System Design Patterns
+                            </Typography>
+                            <Typography>
+                                Visual guides and simplified breakdown of real-world scalable systems.
+                            </Typography>
+                            <Typography color="blue" className="underline cursor-pointer" >
+                                Get Started
+                            </Typography>
+                        </Box>
+                    </Box>
                 </Grid>
             </Grid>
         </Box>
