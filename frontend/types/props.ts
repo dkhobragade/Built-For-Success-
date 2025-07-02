@@ -18,3 +18,12 @@ export interface ButtonProps {
     color?:'inherit' | 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning' | string,
     sx?: React.CSSProperties;
 }
+
+export interface CardContentProps {
+    key:string,
+    title: string;
+    description: string;
+    icon: string;
+    isLocked: boolean;
+    color: string;
+}

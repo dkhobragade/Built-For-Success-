@@ -1,13 +1,13 @@
 "use client"
 
 import colors from "@/lib/colors";
-import { CardContent } from "@/lib/constants";
+import { CardContentProps } from "@/types/props";
 import { AutoStoriesOutlined, BugReportOutlined, DoubleArrowOutlined, ImportantDevicesOutlined, LibraryBooksOutlined, SubjectOutlined, WorkHistoryOutlined } from "@mui/icons-material";
 import { Box, Tooltip, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function Sidebar ()
+export default function Sidebar ( { cardContent }: { cardContent: CardContentProps[] } )
 {
     const router = useRouter()
     const [ isSidebarOpen, setIsSidebarOpen ] = useState( false )
@@ -40,7 +40,7 @@ export default function Sidebar ()
     const renderSideBar = () =>
     {
         return <Box flexDirection="column" gap={ 2 } display="flex">
-            { CardContent.map( ( card, index ) => <Box fontFamily="cursive" onClick={ () => onChangeType( card.key ) } color={ selectedType === card.key ? colors.WhiteSmoke : colors.BlackForestBlue } bgcolor={ selectedType === card.key ? colors.BlackForestBlue : colors.WhiteSmoke } className='cursor-pointer' padding={ 1 } borderRadius={ 2 } key={ index } display="flex" >
+            { cardContent.map( ( card, index ) => <Box fontFamily="cursive" onClick={ () => onChangeType( card.key ) } color={ selectedType === card.key ? colors.WhiteSmoke : colors.BlackForestBlue } className='cursor-pointer WhiteSmoke' padding={ 1 } borderRadius={ 2 } key={ index } display="flex" >
                 <Box display="flex" alignItems="center" gap={ 1.5 }>
                     <Box>
                         { !isSidebarOpen ?

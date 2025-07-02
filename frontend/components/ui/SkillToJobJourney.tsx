@@ -1,4 +1,3 @@
-"use client"
 
 import colors from "@/lib/colors";
 import { AutoStoriesOutlined, EmojiEmotionsOutlined, SubjectOutlined } from "@mui/icons-material";

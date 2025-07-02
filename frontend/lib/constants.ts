@@ -1,4 +1,3 @@
-import { title } from "process";
 import colors from "./colors";
 
 export const CardContent = [
