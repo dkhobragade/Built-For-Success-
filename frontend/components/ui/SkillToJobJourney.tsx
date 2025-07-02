@@ -4,8 +4,8 @@ import colors from "@/lib/colors";
 import { AutoStoriesOutlined, EmojiEmotionsOutlined, SubjectOutlined } from "@mui/icons-material";
 import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import ColorButton from "./ColorButton";
 import AnimatedCard from "./AnimatedCard";
+import { BlackButton } from "./ColorButton";
 
 export default function SkillToJobJourney ()
 {
@@ -31,7 +31,7 @@ export default function SkillToJobJourney ()
                                     Build your problem-solving skills and master the fundamentals of efficient code.
                                     Perfect for coding interviews and real-world development.
                                 </Typography>
-                                <ColorButton variant="outlined" text="Start Practicing" />
+                                <BlackButton variant="outlined" text="Start Practicing" />
                             </Box>
                         </Box>
                     </AnimatedCard>
@@ -45,7 +45,7 @@ export default function SkillToJobJourney ()
                                     Learn to design scalable systems used by top tech companies.
                                     Real-world examples, architecture diagrams, and case studies.
                                 </Typography>
-                                <ColorButton variant="outlined" text="Learn System Design" />
+                                <BlackButton variant="outlined" text="Learn System Design" />
                             </Box>
                             <Box width="100%" height={ 250 } >
                                 <Image src='/image5.jpg' className="transition-all duration-300 hover:scale-105 cursor-pointer" width={ 400 } height={ 300 } alt={ "" } />
@@ -65,7 +65,7 @@ export default function SkillToJobJourney ()
                                     Solidify your understanding of core CS subjects: OS, DBMS, CN, and more.
                                     Designed for both academic success and real-world understanding.
                                 </Typography>
-                                <ColorButton variant="outlined" text="Start Learning Now" />
+                                <BlackButton variant="outlined" text="Start Learning Now" />
                             </Box>
                         </Box>
                     </AnimatedCard>
