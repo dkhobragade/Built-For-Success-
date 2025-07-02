@@ -10,15 +10,41 @@ export default function DsaMainPage ()
 {
     const container = useRef<HTMLDivElement | null>( null )
 
+    const container1 = useRef<HTMLDivElement | null>( null );
+    const container2 = useRef<HTMLDivElement | null>( null );
+    const container3 = useRef<HTMLDivElement | null>( null );
+
+
+    const { scrollYProgress: scrollY1 } = useScroll( {
+        target: container1,
+        offset: [ "end end", "end end" ]
+    } );
+
+    const { scrollYProgress: scrollY2 } = useScroll( {
+        target: container2,
+        offset: [ "start end", "end end" ]
+    } );
+
+    const { scrollYProgress: scrollY3 } = useScroll( {
+        target: container3,
+        offset: [ "center end", "end end" ]
+    } );
+
+
     const { scrollYProgress } = useScroll( {
         target: container,
         offset: [ "center end", "end end" ]
     } )
 
-    return <Box ref={ container } className="relative h-[200vh]">
-        <Section1 ref={ container } scrollYProgress={ scrollYProgress } />
-        <Section2 scrollYProgress={ scrollYProgress } />
-        <Section3 scrollYProgress={ scrollYProgress } />
+    // return <Box ref={ container } className="relative h-[200vh]">
+    //     <Section1 ref={ container } scrollYProgress={ scrollYProgress } />
+    //     <Section2 scrollYProgress={ scrollYProgress } />
+    //     <Section3 scrollYProgress={ scrollYProgress } />
+    // </Box>
+    return <Box className="relative">
+        <Section1 ref={ container1 } scrollYProgress={ scrollY1 } />
+        <Section2 ref={ container2 } scrollYProgress={ scrollY2 } />
+        <Section3 ref={ container3 } scrollYProgress={ scrollY3 } />
     </Box>
 }
 
@@ -26,9 +52,8 @@ export default function DsaMainPage ()
 const Section1 = ( { scrollYProgress }: any ) =>
 {
     const scale = useTransform( scrollYProgress, [ 0, 1 ], [ 1, 0.8 ] )
-    const rotate = useTransform( scrollYProgress, [ 0, 1 ], [ 0, 5 ] )
 
-    return <motion.div style={ { scale, rotate } } className="sticky top-0 h-screen"  >
+    return <motion.div style={ { scale, } } className="sticky top-0 h-screen"  >
         <Box bgcolor={ colors.WhiteSmoke } margin={ 4 } padding={ 5 } borderRadius={ 4 } >
             <Box justifySelf="end" top={ -60 } position="relative" bgcolor={ colors.LiberatorGold } padding={ 2 } width="fit-content" borderRadius={ 2 }>
                 <Typography fontWeight={ 600 } fontFamily="cursive"  >
@@ -84,9 +109,8 @@ const Section1 = ( { scrollYProgress }: any ) =>
 const Section2 = ( { scrollYProgress }: any ) =>
 {
     const scale = useTransform( scrollYProgress, [ 0, 1 ], [ 0.8, 1 ] );
-    const rotate = useTransform( scrollYProgress, [ 0, 1 ], [ 5, 0 ] )
 
-    return <motion.div style={ { scale, rotate } } className="relative" >
+    return <motion.div style={ { scale, } } className="sticky top-0 h-screen" >
         <Box bgcolor={ colors.LiberatorGold } margin={ 4 } padding={ 5 } borderRadius={ 4 } >
             <Box justifySelf="start" top={ -60 } position="relative" bgcolor={ colors.WhiteSmoke } padding={ 2 } width="fit-content" borderRadius={ 2 }>
                 <Typography fontWeight={ 600 } fontFamily="cursive"  >
@@ -116,7 +140,7 @@ const Section2 = ( { scrollYProgress }: any ) =>
             <Grid container>
                 <Grid size={ 4 }>
                     <Box>
-                        <Image src='/RB.png' alt="RB" width={ 350 } height={ 0 } />
+                        <Image src='/RB.png' alt="RB" width={ 350 } height={ 200 } />
                     </Box>
                 </Grid>
                 <Grid size={ 8 }>
@@ -142,9 +166,8 @@ const Section2 = ( { scrollYProgress }: any ) =>
 const Section3 = ( { scrollYProgress }: any ) =>
 {
     const scale = useTransform( scrollYProgress, [ 0, 1 ], [ 0.8, 1 ] );
-    const rotate = useTransform( scrollYProgress, [ 0, 1 ], [ 5, 0 ] )
 
-    return <motion.div style={ { scale, rotate } } className="relative" >
+    return <motion.div style={ { scale, } } className="relative" >
         <Box bgcolor={ colors.WhiteSmoke } margin={ 4 } padding={ 5 } borderRadius={ 4 } >
             <Box justifySelf="end" top={ -60 } position="relative" bgcolor={ colors.LiberatorGold } padding={ 2 } width="fit-content" borderRadius={ 2 }>
                 <Typography fontWeight={ 600 } fontFamily="cursive"  >

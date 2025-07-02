@@ -1,10 +1,10 @@
+import DsaMainPage from "@/components/ui/DsaMainPage";
 import HeroTextBlock from "@/components/ui/HeroTextBlock";
 import LandingHero from "@/components/ui/LandingHero";
 import SkillScroller from "@/components/ui/SkillScroller";
-import { Box } from "@mui/material";
 import SkillToJobJourney from "@/components/ui/SkillToJobJourney";
-import Footer from "@/components/ui/Footer";
-import DsaMainPage from "@/components/ui/DsaMainPage";
+import Toolkit from "@/components/ui/Toolkit";
+import { Box, } from "@mui/material";
 
 
 export default function Home ()
@@ -15,12 +15,13 @@ export default function Home ()
       <LandingHero />
       <SkillScroller />
       <HeroTextBlock />
+      <Toolkit />
       <SkillToJobJourney />
       <DsaMainPage />
-      {/* <Footer /> */ }
     </Box>
   );
 }
+
 
 
 

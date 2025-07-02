@@ -1,6 +1,6 @@
-import ColorButton from "@/components/ui/ColorButton";
 import colors from "@/lib/colors";
 import { Box, Grid, Typography } from "@mui/material";
+import { BlackButton } from "./ColorButton";
 
 
 export default function LandingHero ()
@@ -30,7 +30,7 @@ export default function LandingHero ()
                     Skill up, stand out, and get hired with confidence.
                 </Typography>
                 <Box width={ 250 } paddingTop={ 2 } >
-                    <ColorButton fullWidth size="large" variant="contained" text="Sign In" />
+                    <BlackButton fullWidth size="large" variant="contained" text="Sign In" />
                 </Box>
             </Grid>
             <Grid size={ 6 }  >
