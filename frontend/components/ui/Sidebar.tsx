@@ -1,13 +1,12 @@
 "use client"
 
-import colors from "@/lib/colors";
 import { CardContentProps } from "@/types/props";
 import { AutoStoriesOutlined, BugReportOutlined, DoubleArrowOutlined, ImportantDevicesOutlined, LibraryBooksOutlined, SubjectOutlined, WorkHistoryOutlined } from "@mui/icons-material";
 import { Box, Tooltip, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function Sidebar ( { cardContent }: { cardContent: CardContentProps[] } )
+export default function Sidebar ( { cardContent, colors }: { cardContent: CardContentProps[], colors: any } )
 {
     const router = useRouter()
     const [ isSidebarOpen, setIsSidebarOpen ] = useState( false )

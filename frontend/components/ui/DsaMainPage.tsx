@@ -1,12 +1,11 @@
 "use client"
 
-import colors from "@/lib/colors";
 import { Box, Grid, Typography } from "@mui/material";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
-export default function DsaMainPage ()
+export default function DsaMainPage ( { colors }: { colors: any } )
 {
     const container = useRef<HTMLDivElement | null>( null )
 
@@ -42,14 +41,14 @@ export default function DsaMainPage ()
     //     <Section3 scrollYProgress={ scrollYProgress } />
     // </Box>
     return <Box className="relative">
-        <Section1 ref={ container1 } scrollYProgress={ scrollY1 } />
-        <Section2 ref={ container2 } scrollYProgress={ scrollY2 } />
-        <Section3 ref={ container3 } scrollYProgress={ scrollY3 } />
+        <Section1 colors={ colors } ref={ container1 } scrollYProgress={ scrollY1 } />
+        <Section2 colors={ colors } ref={ container2 } scrollYProgress={ scrollY2 } />
+        <Section3 colors={ colors } ref={ container3 } scrollYProgress={ scrollY3 } />
     </Box>
 }
 
 
-const Section1 = ( { scrollYProgress }: any ) =>
+const Section1 = ( { scrollYProgress, colors }: any ) =>
 {
     const scale = useTransform( scrollYProgress, [ 0, 1 ], [ 1, 0.8 ] )
 
@@ -106,7 +105,7 @@ const Section1 = ( { scrollYProgress }: any ) =>
     </motion.div>
 }
 
-const Section2 = ( { scrollYProgress }: any ) =>
+const Section2 = ( { scrollYProgress, colors }: any ) =>
 {
     const scale = useTransform( scrollYProgress, [ 0, 1 ], [ 0.8, 1 ] );
 
@@ -163,7 +162,7 @@ const Section2 = ( { scrollYProgress }: any ) =>
     </motion.div>
 }
 
-const Section3 = ( { scrollYProgress }: any ) =>
+const Section3 = ( { scrollYProgress, colors }: any ) =>
 {
     const scale = useTransform( scrollYProgress, [ 0, 1 ], [ 0.8, 1 ] );
 

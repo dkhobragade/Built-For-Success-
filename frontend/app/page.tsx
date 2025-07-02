@@ -4,6 +4,8 @@ import LandingHero from "@/components/ui/LandingHero";
 import SkillScroller from "@/components/ui/SkillScroller";
 import SkillToJobJourney from "@/components/ui/SkillToJobJourney";
 import Toolkit from "@/components/ui/Toolkit";
+import colors from "@/lib/colors";
+import { CardContent, ScrollItems } from "@/lib/constants";
 import { Box, } from "@mui/material";
 
 
@@ -13,11 +15,11 @@ export default function Home ()
   return (
     <Box >
       <LandingHero />
-      <SkillScroller />
-      <HeroTextBlock />
+      <SkillScroller colors={ colors } scrollItems={ ScrollItems } />
+      <HeroTextBlock cardContent={ CardContent } />
       <Toolkit />
       <SkillToJobJourney />
-      <DsaMainPage />
+      <DsaMainPage colors={ colors } />
     </Box>
   );
 }
