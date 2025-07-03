@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function LandingHero ()
 {
-    return <Box bgcolor={ colors.WhiteSmoke } className='h-screen' alignContent="center" padding={ 2 } margin={ 5 } borderRadius={ 5 } >
+    return <Box bgcolor={ colors.WhiteSmoke } alignContent="center" padding={ 2 } margin={ 5 } borderRadius={ 5 } >
         <Grid container spacing={ 2 }>
             <Grid size={ 6 } display="grid" justifyContent="end" >
                 <Box alignSelf="center" >

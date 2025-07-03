@@ -1,4 +1,4 @@
-import { Box, } from "@mui/material";
+import { Box } from "@mui/material";
 import colors from "@/lib/colors";
 import CallToAction from "@/components/ui/CTA";
 import DsaMainPage from "@/components/ui/DsaMainPage";
@@ -8,6 +8,7 @@ import SkillScroller from "@/components/ui/SkillScroller";
 import SkillToJobJourney from "@/components/ui/SkillToJobJourney";
 import { CardContent, ScrollItems } from "@/lib/constants";
 import Toolkit from "@/components/ui/Toolkit";
+import Footer from "@/components/ui/Footer";
 
 
 export default function Home ()
@@ -22,6 +23,7 @@ export default function Home ()
       <SkillToJobJourney />
       <DsaMainPage colors={ colors } />
       <CallToAction />
+      <Footer />
     </Box>
   );
 }
