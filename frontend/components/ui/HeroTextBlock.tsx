@@ -30,6 +30,10 @@ export default function HeroTextBlock ( { cardContent }: { cardContent: CardCont
         {
             router.push( '/systemdesign' )
         }
+        else if ( index == 2 )
+        {
+            router.push( '/subjects' )
+        }
     }
 
     const renderCardComponent = () =>

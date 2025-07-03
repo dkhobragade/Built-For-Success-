@@ -12,6 +12,7 @@ const colors = {
     "White":'#FFFFFF',
     "SelectiveYellow":'#FFBB00',
     "Black":'#000000',
+    "RaspberryLeafGreen":'#0C513F'
 }
 
 export default colors;

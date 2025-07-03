@@ -1,12 +1,13 @@
+import { Box, } from "@mui/material";
+import colors from "@/lib/colors";
+import CallToAction from "@/components/ui/CTA";
 import DsaMainPage from "@/components/ui/DsaMainPage";
 import HeroTextBlock from "@/components/ui/HeroTextBlock";
 import LandingHero from "@/components/ui/LandingHero";
 import SkillScroller from "@/components/ui/SkillScroller";
 import SkillToJobJourney from "@/components/ui/SkillToJobJourney";
-import Toolkit from "@/components/ui/Toolkit";
-import colors from "@/lib/colors";
 import { CardContent, ScrollItems } from "@/lib/constants";
-import { Box, } from "@mui/material";
+import Toolkit from "@/components/ui/Toolkit";
 
 
 export default function Home ()
@@ -20,6 +21,7 @@ export default function Home ()
       <Toolkit />
       <SkillToJobJourney />
       <DsaMainPage colors={ colors } />
+      <CallToAction />
     </Box>
   );
 }
