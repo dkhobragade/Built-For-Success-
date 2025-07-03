@@ -1,6 +1,6 @@
 import colors from "@/lib/colors";
 import { bitManipulationAndMathTopic, coreFoundationTopics, dynamicProgrammingCoreTopics, hashingAndFrequencyTopics, recursionAndBacktrackingTopics, systemDesignTopics, treesAndGraphsTopics } from "@/lib/constants";
-import { Box, Grid, Typography, } from "@mui/material";
+import { Box, Typography, } from "@mui/material";
 
 export default function Page ()
 {
